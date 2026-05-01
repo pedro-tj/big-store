@@ -276,6 +276,7 @@ function sh_header_sh_htm_main {
 
 	# Save search query
 	search="${search//+/ }"
+	mkdir -p "$TMP_FOLDER"
 	if [[ -n "$search" ]]; then
 		echo "$search" >> "${TMP_FOLDER}/query.txt"
 		TIni.Set "$INI_FILE_BIG_STORE" 'bigstore' 'search' "$search"
